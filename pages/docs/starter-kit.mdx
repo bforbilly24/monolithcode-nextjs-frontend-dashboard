@@ -1,0 +1,95 @@
+# Starter Kit
+
+Starter-kit is a minimal template from where you can start your project quickly instead of removing stuff that isn't needed. Below are quick notes on the starter-kit:
+
+- No Auth
+- No Dashboard
+- No Apps
+- No Pages
+- No Elements
+
+### Folder Structure
+
+Learn about the folder structure of the Starter Kit and its contents.
+
+
+```
+|
+├─ app
+│  ├─ (dashboard)
+│  │  |-layout.jsx
+│  │  |-main-layout.jsx
+│  │  |-page.jsx
+│  │
+│  ├─ api
+│  ├─ assets
+│  |- favicon.ico
+│  |- layout.jsx
+│  |- not-found.js
+│
+├─ components
+│  ├─ landing-page
+│  ├─ partials
+│  ├─ svg
+│  ├─ ui
+|  |-blank.jsx
+│  |-dashboard-select.jsx
+│  |-dashboard-dropdown.jsx
+│  |-date-picker-with-range.jsx
+│  |-delete-confirmation-dialog.jsx
+│  |-error-block.jsx
+│  |-header-search.jsx
+│  |-layout-order.jsx
+│  |-ripple.jsx
+|
+├─ config
+├─ hooks
+├─ lib
+│  ├─ docs
+│  |-appex-chat-options.jsx
+│  |-auth.js
+│  |-utils.js
+│
+├─ provider
+├─ public
+├─ store
+|- .env.local
+|- .gitignore
+|- jsconfig.json
+|- middleware.js
+|- next.env.d.ts
+|- next.config.js
+|- package-lock.json
+|- package.json
+|- README.md
+|- postcss.config.js
+|- tailwind.config.js
+|- theme.config.js
+|- yarn.lock
+```
+
+### Theme Configuration
+
+Configuring themes in DashTail is incredibly simple. The primary configuration file is site.js. Inside the site.js file, you can set up your theme, layout, sidebar type, sidebar color, and more. Refer to the code snippet below for all available options.
+
+```js filename="site.js"
+export const siteConfig = {
+  name: "DashTail Next js Admin Template",
+  description: null,
+  theme: "violet",
+  // yellow, blue, orange, rose, red, neutral, gray, stone, slate, zinc
+  layout: "vertical",
+  // semi-box, horizontal, vertical
+  hideSideBar: false,
+  sidebarType: "module",
+  // popover, classic, module
+  sidebarColor: null,
+  navbarType: "sticky",
+  // sticky, floating, static
+  footerType: "static",
+  // sticky,  static, hidden
+  sidebarBg: "none",
+  radius: 0.5,
+};
+
+```

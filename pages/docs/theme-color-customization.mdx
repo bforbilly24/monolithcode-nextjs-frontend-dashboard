@@ -1,0 +1,63 @@
+import { Callout, Steps } from "nextra/components"
+
+# Theme Color Customization
+Customizing the theme color in DashTail is highly flexible, allowing you to use any custom color as the theme color.
+
+
+### Adding a New Color:
+
+To begin, open the theme.scss file and add your new color following the code snippet provided.
+
+<Callout>Ensure you use the HSL color values.</Callout>
+
+
+
+
+```scss filename="theme.scss"
+.theme-apple {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+
+  ////////////////////
+
+  --default-950: 240 10% 3.9%;
+
+  --ring: 240 5.9% 10%;
+}
+
+.dark .theme-apple {
+  --background: 240 5.9% 10%;
+  --foreground: 0 0% 98%;
+
+  ////////////////////
+
+  --default-200: 240 5.3% 26.1%;
+  --default-100: 240 3.7% 15.9%;
+  --default-50: 240 5.9% 10%;
+}
+```
+### Defining Your Color:
+
+After creating your color, define it in the site.js file by referring to the code snippet provided.
+
+
+```js filename="site.js"
+export const siteConfig = {
+  name: "DashTail Next js Admin Template",
+  description: null,
+  theme: "apple",
+  // yellow, blue, orange, rose, red, neutral, gray, stone, slate, zinc, violate
+  layout: "vertical",
+  // semi-box, horizontal, vertical
+  hideSideBar: false,
+  sidebarType: "module",
+  // popover, classic, module
+  sidebarColor: null,
+  navbarType: "sticky",
+  // sticky, floating, static
+  footerType: "static",
+  // sticky,  static, hidden
+  sidebarBg: "none",
+  radius: 0.5,
+};
+```

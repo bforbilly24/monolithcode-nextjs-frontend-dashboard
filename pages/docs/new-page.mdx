@@ -1,0 +1,32 @@
+import { Callout, Steps } from "nextra/components";
+
+# New Page
+
+Making a new page is incredibly simple in DashTail. Here's an example of how to create your own custom page and set it up according to your needs.
+
+
+
+
+### Creating a new page
+
+To create a new page, make a new .js or .jsx file inside the app folder. You can also create a page within a subfolder of the app folder. For instance, `app/foldername/page.jsx`.
+
+
+
+
+```js filename="app/foldername/page.jsx" /children/
+const About = () => {
+  return (
+    <div class="about">
+      <h1>About</h1>
+    </div>
+  );
+};
+```
+
+
+<Callout type="info">
+You have successfully created a new page. Please add this page to [menu](/docs/menu-customization).
+</Callout>
+
+

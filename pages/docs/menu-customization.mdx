@@ -1,0 +1,117 @@
+import { Tabs } from "nextra/components";
+
+# Menu Customization
+In our demo, we've utilized various menu structures. To customize your menu, start by selecting the menu structure you prefer for your application.
+
+
+### Vertical Menu
+If you prefer using the vertical menu in your system, you can tailor the menus.js file to suit your requirements.
+
+```js filename="config/menus.js" /children/
+
+export const menusConfig = {
+  sidebarNav: {
+    modern: [
+      {
+        title: "Components",
+        icon: Components,
+        child: [
+          {
+            title: "Base Ui",
+            icon: Flag,
+            nested: [
+              {
+                title: "avatar",
+                icon: "heroicons:information-circle",
+                href: "/avatar",
+              },
+              {
+                title: "about",
+                icon: "heroicons:information-circle",
+                href: "/about",
+              },
+            ],
+          },
+        ],
+      },
+    ];
+  }
+};
+```
+
+
+### Vertical Collapsed Menu
+
+If you prefer using the vertical collapsed menu in your system, you can tailor the menus.js file to suit your requirements.
+
+```js filename="config/menus.js" /children/
+
+export const menusConfig = {
+  sidebarNav: {
+    classic: [
+      {
+        title: "Components",
+        icon: Components,
+        child: [
+          {
+            title: "Base Ui",
+            icon: Flag,
+            nested: [
+              {
+                title: "avatar",
+                icon: "heroicons:information-circle",
+                href: "/avatar",
+              },
+              {
+                title: "about",
+                icon: "heroicons:information-circle",
+                href: "/about",
+              },
+            ],
+          },
+        ],
+      },
+    ];
+  }
+};
+
+```
+
+
+
+
+
+
+### Horizontal Menu
+
+
+If you prefer using the horizontal collapsed menu in your system, you can tailor the menus.js file to suit your requirements.
+
+
+```js filename="config/menus.js" /children/
+export const menusConfig = {
+  mainNav: [
+    {
+      title: "Dashboard",
+      icon: DashBoard,
+      child: [
+        {
+          title: "Analytics",
+          href: "/dashboard",
+          icon: Graph,
+        },
+        {
+          title: "Ecommerce",
+          href: "/ecommerce",
+          icon: Cart,
+        },
+        {
+          title: "about",
+          icon: "heroicons:information-circle",
+          href: "/about",
+        },
+      ],
+    },
+  ],
+};
+```

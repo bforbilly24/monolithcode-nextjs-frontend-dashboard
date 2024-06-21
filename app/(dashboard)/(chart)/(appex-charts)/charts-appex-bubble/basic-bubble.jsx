@@ -1,0 +1,144 @@
+"use client";
+import dynamic from "next/dynamic";
+const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { useThemeStore } from "@/store";
+import { useTheme } from "next-themes";
+import { themes } from "@/config/thems";
+import {
+  getGridConfig,
+  getLabel,
+  getYAxisConfig,
+} from "@/lib/appex-chart-options";
+
+const BasicBubble = ({ height = 350 }) => {
+  const { theme: config, setTheme: setConfig } = useThemeStore();
+  const { theme: mode } = useTheme();
+  const theme = themes.find((theme) => theme.name === config);
+
+  function generateData(baseval, count, yrange) {
+    var i = 0;
+    var series = [];
+    while (i < count) {
+      var x = Math.floor(Math.random() * (750 - 1 + 1)) + 1;
+      var y =
+        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+      var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
+
+      series.push([x, y, z]);
+      baseval += 86400000;
+      i++;
+    }
+    return series;
+  }
+  const series = [
+    {
+      name: "Bubble1",
+      data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+        min: 10,
+        max: 60,
+      }),
+    },
+    {
+      name: "Bubble2",
+      data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+        min: 10,
+        max: 60,
+      }),
+    },
+    {
+      name: "Bubble3",
+      data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+        min: 10,
+        max: 60,
+      }),
+    },
+    {
+      name: "Bubble4",
+      data: generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+        min: 10,
+        max: 60,
+      }),
+    },
+  ];
+
+  const options = {
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    fill: {
+      opacity: 0.8,
+    },
+    stroke: {
+      curve: "smooth",
+      width: 4,
+    },
+    colors: [
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].primary})`,
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].info})`,
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].warning})`,
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].success})`,
+    ],
+    tooltip: {
+      theme: mode === "dark" ? "dark" : "light",
+    },
+    grid: getGridConfig(
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].chartGird})`
+    ),
+    plotOptions: {
+      bar: {
+        horizontal: true,
+      },
+    },
+    legend: {
+      labels: {
+        colors: `hsl(${
+          theme?.cssVars[
+            mode === "dark" || mode === "system" ? "dark" : "light"
+          ].chartLabel
+        })`,
+      },
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    },
+    xaxis: {
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
+      labels: getLabel(
+        `hsl(${
+          theme?.cssVars[
+            mode === "dark" || mode === "system" ? "dark" : "light"
+          ].chartLabel
+        })`
+      ),
+    },
+    yaxis: getYAxisConfig(
+      `hsl(${theme?.cssVars[mode === "dark" ? "dark" : "light"].chartLabel})`
+    ),
+  };
+  return (
+    <>
+      <Chart
+        options={options}
+        series={series}
+        type="bubble"
+        height={height}
+        width={"100%"}
+      />
+    </>
+  );
+};
+
+export default BasicBubble;

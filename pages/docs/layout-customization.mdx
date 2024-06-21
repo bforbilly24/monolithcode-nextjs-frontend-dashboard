@@ -1,0 +1,80 @@
+# Layout Customization
+
+By default, DashTail includes three predefined layouts. However, you can create new layouts based on your requirements.
+
+### Adding a New Layout:
+
+Start by opening the main-layout.jsx file and adding your new layout using the provided code snippet.
+
+
+```jsx filename="main-layout.jsx"
+
+const MainLayout = ({ children }) => {
+  const { collapsed, sidebarType, setCollapsed, subMenu } = useSidebar();
+  const [open, setOpen] = React.useState(false);
+  const { layout } = useThemeStore();
+  const location = usePathname();
+  const isMobile = useMediaQuery("(min-width: 768px)");
+  const mounted = useMounted();
+  if (!mounted) {
+    return <LayoutLoader />;
+  }
+    if (layout === "reverse") {
+    return (
+      <>
+        <Header handleOpenSearch={() => setOpen(true)} />
+
+        <div className={cn("content-wrapper transition-all duration-150 ")}>
+          <div
+            className={cn(
+              "  md:pt-6 pb-[37px] pt-[15px] md:px-6 px-4  page-min-height-reverse ",
+              {}
+            )}
+          >
+            <LayoutWrapper
+              isMobile={isMobile}
+              setOpen={setOpen}
+              open={open}
+              location={location}
+            >
+              {children}
+            </LayoutWrapper>
+          </div>
+        </div>
+        <Footer />
+        <ThemeCustomize />
+      </>
+    );
+  }
+
+};
+
+export default MainLayout;
+
+```
+
+### Defining Your Layout:
+
+Once you've created your layout, define it in the site.js file by following the code snippet provided.
+
+
+```js filename="site.js"
+export const siteConfig = {
+  name: "DashTail Next js Admin Template",
+  description: null,
+  theme: "violate",
+  // yellow, blue, orange, rose, red, neutral, gray, stone, slate, zinc, violate
+  layout: "reverse",
+  // semi-box, horizontal, vertical
+  hideSideBar: false,
+  sidebarType: "module",
+  // popover, classic, module
+  sidebarColor: null,
+  navbarType: "sticky",
+  // sticky, floating, static
+  footerType: "static",
+  // sticky,  static, hidden
+  sidebarBg: "none",
+  radius: 0.5,
+};
+```
