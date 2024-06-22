@@ -7,7 +7,7 @@ import { Slider } from "@/components/ui/slider";
 
 const DemoApp = () => {
   const [config, setConfig] = useState({
-    text: "DashTail",
+    text: "MonolithCode",
     textColor: "#FF0000",
     opacity: 0.2,
     gutter: 40,

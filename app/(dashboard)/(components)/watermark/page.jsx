@@ -10,7 +10,7 @@ const WaterMarkPage = () => {
           The <code className="text-primary">text</code> props change the
           watermark by changing the text value.
         </p>
-        <Watermark text="DashTail">
+        <Watermark text="MonolithCode">
           <div className="bg-default-900 dark:bg-default-50 text-white text-lg  rounded-lg shadow-lg  h-[500px] p-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum et
             neque esse labore nemo repellendus assumenda. Amet voluptatibus
@@ -25,7 +25,7 @@ const WaterMarkPage = () => {
           The <code className="text-primary">multiline</code> props change the
           watermark from one line to different line.
         </p>
-        <Watermark gutter={60} multiline text={`DashTail\nCodeshaper`}>
+        <Watermark gutter={60} multiline text={`MonolithCode\nCodeshaper`}>
           <div className="bg-default-900 dark:bg-default-50 text-white text-lg   rounded-lg shadow-lg  h-[500px] p-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum et
             neque esse labore nemo repellendus assumenda. Amet voluptatibus

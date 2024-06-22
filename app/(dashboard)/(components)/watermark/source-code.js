@@ -6,7 +6,7 @@ import DemoApp from "./demo-app";
 const BasicWatermark = () => {
   return (
     <React.Fragment>
-      <Watermark multiline text="DashTail">
+      <Watermark multiline text="MonolithCode">
         <div className=" bg-primary text-lg text-primary-foreground rounded-lg shadow-lg  h-[500px] p-6">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum et
           neque esse labore nemo repellendus assumenda. Amet voluptatibus

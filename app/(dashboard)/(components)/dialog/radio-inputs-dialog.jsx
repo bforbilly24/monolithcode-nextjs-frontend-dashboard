@@ -22,7 +22,7 @@ const RadioInputsDialog = () => {
                 <div className="flex items-center">
                   <div className="grow flex flex-col gap-1">
                     <h3 className="text-sm font-semibold text-default-950 group-hover:text-primary">UX/UI Design Course</h3>
-                    <span className="text-xs text-default-600">DashTail</span>
+                    <span className="text-xs text-default-600">MonolithCode</span>
                     <span className="text-xs text-default-600">20 seats available</span>
                   </div>
                   <div>
@@ -37,7 +37,7 @@ const RadioInputsDialog = () => {
                 <div className="flex items-center">
                   <div className="grow flex flex-col gap-1">
                     <h3 className="text-sm font-semibold text-default-950 group-hover:text-primary">PHP/Laravel Course</h3>
-                    <span className="text-xs text-default-600">DashTail</span>
+                    <span className="text-xs text-default-600">MonolithCode</span>
                     <span className="text-xs text-default-600">20 seats available</span>
                   </div>
                   <div>
@@ -52,7 +52,7 @@ const RadioInputsDialog = () => {
                 <div className="flex items-center">
                   <div className="grow flex flex-col gap-1">
                     <h3 className="text-sm font-semibold text-default-950 group-hover:text-primary">Digital Marketing Course</h3>
-                    <span className="text-xs text-default-600">DashTail</span>
+                    <span className="text-xs text-default-600">MonolithCode</span>
                     <span className="text-xs text-default-600">20 seats available</span>
                   </div>
                   <div>
