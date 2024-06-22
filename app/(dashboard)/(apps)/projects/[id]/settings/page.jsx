@@ -74,7 +74,7 @@ const Settings = () => {
           </div>
           <div className="col-span-12 md:col-span-9">
             <Input
-              defaultValue="Dashtail Dashboard Template"
+              defaultValue="Monolithcode Dashboard Template"
               size="lg"
               id="projectName"
             />
