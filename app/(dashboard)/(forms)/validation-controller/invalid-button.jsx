@@ -53,7 +53,7 @@ const InvalidButton = () => {
               <FormLabel className="mb-2 text-default-950">Username</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="DashTail"
+                  placeholder="MonolithCode"
                   {...field}
                   className={cn("", {
                     "border-destructive focus:border-destructive":

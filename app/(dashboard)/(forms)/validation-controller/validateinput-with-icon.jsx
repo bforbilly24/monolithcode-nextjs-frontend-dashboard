@@ -54,7 +54,7 @@ const ValidateInputWithIcon = () => {
               <FormControl>
                 <>
                   <Input
-                    placeholder="DashTail"
+                    placeholder="MonolithCode"
                     {...field}
                     className={cn("", {
                       "border-destructive focus:border-destructive":
