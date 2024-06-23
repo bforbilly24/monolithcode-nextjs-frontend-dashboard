@@ -73,7 +73,7 @@ const RegForm = () => {
         Hey, Hello 👋
       </div>
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
-        Create account to start using DashTail
+        Create account to start using MonolithCode
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="mt-5 xl:mt-7">
         <div className="space-y-4">
