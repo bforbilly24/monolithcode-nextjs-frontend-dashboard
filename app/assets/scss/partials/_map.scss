@@ -1,11 +1,11 @@
-.dashtail-codeVmapPrimary path {
+.monolithcode-codeVmapPrimary path {
   @apply fill-primary;
 
   .svg-map__location[aria-checked="true"] {
     @apply fill-primary;
   }
 }
-.dashtail-codeVmapWhite path {
+.monolithcode-codeVmapWhite path {
   @apply fill-default-200 dark:fill-slate-500;
 
   .svg-map__location[aria-checked="true"] {
@@ -13,7 +13,7 @@
   }
 }
 
-.dashtail-codeVmapInfo path {
+.monolithcode-codeVmapInfo path {
   @apply fill-info;
 
   .svg-map__location[aria-checked="true"] {
@@ -21,7 +21,7 @@
   }
 }
 
-.dashtail-codeVmapWarning path {
+.monolithcode-codeVmapWarning path {
   @apply fill-warning;
 
   .svg-map__location[aria-checked="true"] {
@@ -29,7 +29,7 @@
   }
 }
 
-.dashtail-codeVmapSuccess path {
+.monolithcode-codeVmapSuccess path {
   @apply fill-success;
 
   .svg-map__location[aria-checked="true"] {
@@ -37,7 +37,7 @@
   }
 }
 
-.dashtail-codevmap path {
+.monolithcode-codevmap path {
   @apply fill-primary;
 
   .svg-map__location[aria-checked="true"] {
