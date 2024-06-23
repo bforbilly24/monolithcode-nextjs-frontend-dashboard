@@ -7,7 +7,7 @@ const StyledVMap = ({ height = 350 }) => {
 
     return (
         <div className={`w-full h-[${height}px]`} >
-            <VectorMap {...world} className="h-full w-full object-cover dashtail-codevmap" />
+            <VectorMap {...world} className="h-full w-full object-cover monolithcode-codevmap" />
         </div>
     );
 };

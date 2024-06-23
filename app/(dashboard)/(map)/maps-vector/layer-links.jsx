@@ -11,7 +11,7 @@ const LayerLinks = ({ height = 350 }) => {
 
     return (
         <div className={`w-full h-[${height}px]`}>
-            <VectorMap {...world} layerProps={{ onClick }} className="h-full w-full object-cover dashtail-codeVmapSuccess" />
+            <VectorMap {...world} layerProps={{ onClick }} className="h-full w-full object-cover monolithcode-codeVmapSuccess" />
         </div>
     );
 };
