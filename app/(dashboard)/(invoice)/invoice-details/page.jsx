@@ -68,7 +68,7 @@ const InvoicePreview = () => {
                 <div className="flex-1">
                   <Link href="#">
                     <SiteLogo className="w-10 h-10 text-primary mb-2.5" />
-                    <span className="text-3xl font-bold text-primary-600">DashTail</span>
+                    <span className="text-3xl font-bold text-primary-600">MonolithCode</span>
                   </Link>
                   <div className="mt-5">
                     <div className="text-lg font-semibold text-default-900">Billing To:</div>
@@ -180,9 +180,9 @@ const InvoicePreview = () => {
               <div className="text-sm text-default-800 mt-1">Please pay within 15 days from the date of invoice, overdue interest @ 14% will be charged on delayed payments & Please quote invoice number when remitting funds.</div>
               <div className="mt-6 text-lg font-semibold text-default-900">Thank You!</div>
               <div className="mt-1 text-sm text-default-800">If you have any questions concerning this invoice, use the following contact information:</div>
-              <div className="text-xs text-default-800 mt-2">dashtail@best.com</div>
+              <div className="text-xs text-default-800 mt-2">monolithcode@best.com</div>
               <div className="text-xs text-default-800 mt-1">+880 624279888</div>
-              <div className="mt-8 text-xs text-default-800">© 2024 DashTail</div>
+              <div className="mt-8 text-xs text-default-800">© 2024 MonolithCode</div>
             </CardContent>
           </Card>
           <div className="mt-8 flex gap-4 justify-end">
