@@ -449,8 +449,8 @@ export const menus = [
     href: "#elements",
   },
   {
-    title: "Why Dash Tail",
-    href: "#whyDashTail",
+    title: "Why Monolith Code",
+    href: "#whyMonolithCode",
   },
   {
     title: "Pricing",
