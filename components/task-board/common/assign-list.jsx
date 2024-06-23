@@ -19,7 +19,7 @@ const list = [
     name: "Project Title",
   },
   {
-    name: "Dashtail Admin Template",
+    name: "Monolithcode Admin Template",
   },
   {
     name: "User Template",

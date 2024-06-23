@@ -14,7 +14,7 @@ const horizontalHeader = ({ handleOpenSearch }) => {
             <SiteLogo className="h-7 w-7" />
             <span className=" text-xl font-semibold lg:inline-block hidden">
               {" "}
-              DashTail
+              MonolithCode
             </span>
           </Link>
         </div>
