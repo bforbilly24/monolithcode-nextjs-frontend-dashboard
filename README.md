@@ -2,9 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
->
-
-1. Pull in terminal
+> 1. Pull in terminal
 
 ```
 git clone https://github.com/bforbilly24/monolithcode-nextjs-frontend-dashboard.git
